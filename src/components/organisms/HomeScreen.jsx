@@ -7,8 +7,8 @@ const HomeScreen = (props) => {
   return (
     <HomeScreenLayout>
       <Navbar />
-      <img src="/img/Overlay.png" alt="overlay" className="absolute top-0 -left-24 transform scale-125" />
-      <img src="/img/Overlay.png" alt="overlay" className="absolute -bottom-2 -right-24 transform scale-125" />
+      <img src="/img/Overlay.svg" alt="overlay" className="absolute top-0 -left-24 transform scale-125" />
+      <img src="/img/Overlay.svg" alt="overlay" className="absolute -bottom-2 -right-24 transform scale-125" />
       <div className="w-full h-full flex flex-col items-center justify-center">
         <div className="w-max">
           <p className="text-white font-mont-regular tracking-wide italic text-sm">Hi, I'm</p>

@@ -47,7 +47,7 @@ const AboutMeScreen = (props) => {
             <p className="text-white font-mont-regular text-xs tracking-wide">{item.date}</p>
             <h4 className="text-white font-mont-bold text-lg tracking-wide italic my-2">{item.position}</h4>
             <div className="w-full flex items-center">
-              <img src="/img/location_icon.png" alt="location" className="mr-2" />
+              <img src="/img/location_icon.svg" alt="location" className="mr-2" />
               <p className="text-white font-mont-regular text-xs tracking-wide">{item.location}</p>
             </div>
           </div>
