@@ -21,6 +21,15 @@ module.exports = {
         "mont-medium": ["Montserrat-Medium"],
         "mont-regular": ["Montserrat-Regular"],
       },
+      keyframes: {
+        fade: {
+          '0%': { opacity: "0" },
+          "100%": { opacity: "1" }
+        }
+      },
+      animation: {
+        fade: "fade 350ms ease-in-out"
+      }
     },
   },
   variants: {
