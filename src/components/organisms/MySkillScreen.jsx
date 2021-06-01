@@ -6,63 +6,63 @@ import Tag from "../atoms/Tag";
 const MySkillScreen = (props) => {
   const data = [
     {
-      src: "/img/react.png",
+      src: "/img/react.svg",
       alt: "react",
     },
     {
-      src: "/img/redux.png",
+      src: "/img/redux.svg",
       alt: "redux",
     },
     {
-      src: "/img/nextjs.png",
+      src: "/img/nextjs.svg",
       alt: "nextjs",
     },
     {
-      src: "/img/nodejs.png",
+      src: "/img/nodejs.svg",
       alt: "nodejs",
     },
     {
-      src: "/img/html.png",
+      src: "/img/html.svg",
       alt: "html",
     },
     {
-      src: "/img/tailwind.png",
+      src: "/img/tailwind.svg",
       alt: "tailwind",
     },
     {
-      src: "/img/styled.png",
+      src: "/img/styled.svg",
       alt: "styled",
     },
     {
-      src: "/img/sass.png",
+      src: "/img/sass.svg",
       alt: "sass",
     },
     {
-      src: "/img/php.png",
+      src: "/img/php.svg",
       alt: "php",
     },
     {
-      src: "/img/ci.png",
+      src: "/img/ci.svg",
       alt: "ci",
     },
     {
-      src: "/img/mysql.png",
+      src: "/img/mysql.svg",
       alt: "mysql",
     },
     {
-      src: "/img/mongodb.png",
+      src: "/img/mongodb.svg",
       alt: "mongodb",
     },
     {
-      src: "/img/ai.png",
+      src: "/img/ai.svg",
       alt: "ai",
     },
     {
-      src: "/img/ps.png",
+      src: "/img/ps.svg",
       alt: "ps",
     },
     {
-      src: "/img/figma.png",
+      src: "/img/figma.svg",
       alt: "figma",
     },
   ];

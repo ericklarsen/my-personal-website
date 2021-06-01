@@ -10,7 +10,7 @@ const UiUx = (props) => {
   const [distY, setDistY] = useState(0);
   const [startTime, setStartTime] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState("");
-  const threshold = 50;
+  const threshold = 10;
   const restraint = 100;
   const allowedTime = 300;
   const maxMove = 50;
