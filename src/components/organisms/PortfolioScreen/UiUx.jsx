@@ -67,7 +67,7 @@ const UiUx = (props) => {
   return (
     <>
       <div
-        className="flex w-max transition-all duration-300"
+        className="flex w-max transition-all duration-300 animate-fade"
         style={{ transform: `translateX(${move}%)` }}
         onTouchEnd={(e) => onTouchEnd(e)}
         onTouchStart={(e) => onTouchStart(e)}

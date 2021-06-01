@@ -1,21 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TabMenu = (props) => {
+const TabMenu = ({ setCurrentTab, currentTab }) => {
   return (
     <div className="flex flex-shrink-0 justify-center">
-      <div className="mr-8">
+      <div className="mr-8" onClick={() => setCurrentTab("uiux")}>
         <h6 className="font-mont-bold text-white text-lg">UI/UX</h6>
-        <div className="w-10 h-1 bg-red-600 mt-0.5 float-right"></div>
+        {currentTab === "uiux" && <div className="w-10 h-1 bg-red-600 mt-0.5 float-right animate-fade"></div>}
       </div>
-      <div className="">
+      <div className="" onClick={() => setCurrentTab("web")}>
         <h6 className="font-mont-bold text-white text-lg">Web Project</h6>
-        {/* <div className="w-10 h-1 bg-red-600 mt-0.5 float-right"></div> */}
+        {currentTab === "web" && <div className="w-10 h-1 bg-red-600 mt-0.5 float-right animate-fade"></div>}
       </div>
     </div>
   );
 };
 
-TabMenu.propTypes = {};
+TabMenu.propTypes = {
+  setCurrentTab: PropTypes.func,
+  currentTab: PropTypes.string,
+};
 
 export default TabMenu;
