@@ -65,12 +65,12 @@ const WebProjects = (props) => {
       </div>
 
       <div className="flex justify-center items-center flex-shrink-0">
-        <img src="/img/leftArrow.png" alt="left arrow" onClick={leftMove} />
+        <img src="/img/leftArrow.svg" alt="left arrow" onClick={leftMove} />
         <div className="flex mx-8 ">
           <div className="w-3 h-3 rounded-full bg-white opacity-50 mr-2.5"></div>
           <div className="w-3 h-3 rounded-full bg-white opacity-25"></div>
         </div>
-        <img src="/img/rightArrow.png" alt="right arrow" onClick={rightMove} />
+        <img src="/img/rightArrow.svg" alt="right arrow" onClick={rightMove} />
       </div>
     </>
   );
