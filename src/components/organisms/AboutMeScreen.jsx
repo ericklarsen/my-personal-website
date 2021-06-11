@@ -25,30 +25,46 @@ const AboutMeScreen = (props) => {
   return (
     <AboutMeLayout>
       <Tag>
-          About<br/>Me.
+        About
+        <br />
+        Me.
       </Tag>
-
-      <div className="w-full px-10 box-border">
-        <p className="text-white font-mont-regular mt-10 leading-loose">
+      <img src="/img/react_overlay.svg" alt="react" className="absolute top-0 -right-64 lg:-right-56 lg:top-48" />
+      <img
+        src="/img/html_overlay.svg"
+        alt="html"
+        className="absolute top-1/4 -left-1/4 transform scale-75 lg:scale-100 lg:top-0 lg:-left-28"
+      />
+      <img
+        src="/img/next_overlay.svg"
+        alt="nextjs"
+        className="absolute -bottom-12 -right-1/4 transform scale-75 lg:scale-100 lg:-right-28"
+      />
+      <div className="w-full px-10 box-border md:px-0 md:max-w-3xl">
+        <p className="text-white font-mont-regular mt-10 leading-loose md:mt-6 md:text-lg md:leading-loose">
           Hey what's up!
-          <br /> My name is Erick and I’m currently working as a FrontEnd Developer. My competencies
-          are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn
-          and take new challenge.
+          <br />
+          My name is Erick and I’m currently working as a FrontEnd Developer.
+          <br />
+          My competencies are on React, Redux, Next JS, Javascript and also UI/UX.
+          <br />I am always enthusiastic to learn and take new challenge.
         </p>
 
-        <div className=" w-full py-2 mt-12 bg-red-400 ">
-          <h3 className="text-white font-mont-black uppercase tracking-widest w-full text-center text-lg ">
+        <div className=" w-full py-2 mt-12 bg-red-400 md:w-105 md:px-5 md:mt-24">
+          <h3 className="text-white font-mont-black uppercase tracking-widest w-full text-center text-lg md:w-max md:text-2xl">
             Work Experiences
           </h3>
         </div>
 
         {data.map((item, i) => (
-          <div key={i} className="w-full mt-6">
-            <p className="text-white font-mont-regular text-xs tracking-wide">{item.date}</p>
-            <h4 className="text-white font-mont-bold text-lg tracking-wide italic my-2">{item.position}</h4>
+          <div key={i} className="w-full mt-6 md:mt-9">
+            <p className="text-white font-mont-regular text-xs tracking-wide md:text-base">{item.date}</p>
+            <h4 className="text-white font-mont-bold text-lg tracking-wide italic my-2 md:text-2xl md:my-3.5">
+              {item.position}
+            </h4>
             <div className="w-full flex items-center">
-              <img src="/img/location_icon.svg" alt="location" className="mr-2" />
-              <p className="text-white font-mont-regular text-xs tracking-wide">{item.location}</p>
+              <img src="/img/location_icon.svg" alt="location" className="mr-2 md:w-6" />
+              <p className="text-white font-mont-regular text-xs tracking-wide md:text-base">{item.location}</p>
             </div>
           </div>
         ))}
