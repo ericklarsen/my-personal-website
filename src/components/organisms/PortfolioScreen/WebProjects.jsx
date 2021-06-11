@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import SliderContainer from "../../molecules/Slider/SliderContainer";
+import SliderSlide from "../../molecules/Slider/SliderSlide";
 
 const WebProjects = (props) => {
   const [move, setMove] = useState(0);
@@ -23,14 +25,13 @@ const WebProjects = (props) => {
 
   return (
     <>
-      <div
-        className="flex w-max transition-all duration-300 animate-fade"
+      <SliderContainer
         style={{ transform: `translateX(${move}%)` }}
         // onTouchEnd={(e) => onTouchEnd(e)}
         // onTouchStart={(e) => onTouchStart(e)}
       >
-        <div className="w-screen px-10">
-          <div className="w-full grid grid-cols-1 gap-5 my-10">
+        <SliderSlide column={1}>
+          {[...Array(3).keys()].map((i) => (
             <div className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5">
               <h5 className="text-white font-mont-bold tracking-wide text-lg">
                 Academic Website - 2019
@@ -45,24 +46,9 @@ const WebProjects = (props) => {
                 metus scelerisque iaculis mauris magna amet
               </p>
             </div>
-
-            <div className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5">
-              <h5 className="text-white font-mont-bold tracking-wide text-lg">
-                Academic Website - 2019
-              </h5>
-              <p className="text-white font-mont-regular tracking-wide text-xs italic mt-1.5 mb-5">
-                Built with CodeIgniter, PHP and MySQL
-              </p>
-              <p className="text-white font-mont-regular tracking-wide text-xs leading-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed amet lorem ipsum
-                tristique. Quis vulputate id metus scelerisque iaculis mauris magna amet Quis
-                vulputate id metus scelerisque iaculis mauris magna amet na amet Quis vulputate id
-                metus scelerisque iaculis mauris magna amet
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+          ))}
+        </SliderSlide>
+      </SliderContainer>
 
       <div className="flex justify-center items-center flex-shrink-0">
         <img src="/img/leftArrow.svg" alt="left arrow" onClick={leftMove} />

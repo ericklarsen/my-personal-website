@@ -1,26 +1,58 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
+import SliderContainer from "../../molecules/Slider/SliderContainer";
+import SliderSlide from "../../molecules/Slider/SliderSlide";
+import UseIsMobile from "../../../hooks/UseIsMobile";
+import { generateSlider } from "../../../helpers/swipe_helper";
+import DetailUI from "../../molecules/DetailUI";
+import { allData } from "../../../styles/_variables";
+import SliderBubbleButton from "../../molecules/Slider/SliderBubbleButton";
+import Slide from "../../molecules/Slider/Slide";
 
 const UiUx = (props) => {
-  const ref = useRef();
   const [move, setMove] = useState(0);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
-  const [distX, setDistX] = useState(0);
-  const [distY, setDistY] = useState(0);
   const [startTime, setStartTime] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState("");
   const threshold = 10;
   const restraint = 100;
   const allowedTime = 300;
-  const maxMove = 50;
+  const maxMove = 100;
+  const data = allData;
+
+  const [totalSlides, setTotalSlides] = useState(1);
+  const [activeSlide, setActiveSlide] = useState(1);
+  const [show, setShow] = useState(false);
+  const [contentId, setContentId] = useState(0);
+
+  const isMobile = UseIsMobile();
+
+  const onChangeShow = (id) => {
+    setShow(!show);
+    setContentId(id);
+  };
 
   const rightMove = () => {
-    setMove(-50);
+    var valuePerMove = -100 / totalSlides;
+    if (Math.abs(move + valuePerMove) < maxMove) {
+      setMove((prev) => prev + valuePerMove);
+      setActiveSlide((prev) => prev + 1);
+    }
   };
 
   const leftMove = () => {
-    setMove(0);
+    var valuePerMove = -100 / totalSlides;
+    if (Math.abs(move) !== 0) {
+      setMove((prev) => prev - valuePerMove);
+      setActiveSlide((prev) => prev - 1);
+    }
+  };
+
+  const bubbleMove = (index) => {
+    var valuePerMove = -100 / totalSlides;
+    setMove(index * valuePerMove);
+    setActiveSlide(index + 1);
   };
 
   const onTouchEnd = (e) => {
@@ -50,51 +82,45 @@ const UiUx = (props) => {
   };
 
   useEffect(() => {
+    var valuePerMove = -100 / totalSlides;
+
     if (swipeDirection == "left") {
-      if (Math.abs(move) < maxMove) {
-        setMove((prev) => prev + -50);
+      if (Math.abs(move + valuePerMove) < maxMove) {
+        setMove((prev) => prev + valuePerMove);
       }
     } else if (swipeDirection == "right") {
-      if (Math.abs(move) != 0) {
-        setMove((prev) => prev + 50);
+      if (Math.abs(move) !== 0) {
+        setMove((prev) => prev - valuePerMove);
       }
     }
   }, [swipeDirection]);
 
-  console.log(swipeDirection);
-  console.log(move);
+  useEffect(() => {
+    if (isMobile) {
+      setTotalSlides(Math.ceil(data.length / 2));
+    } else {
+      setTotalSlides(Math.ceil(data.length / 4));
+    }
+  }, [isMobile]);
 
   return (
     <>
-      <div
-        className="flex w-max transition-all duration-300 animate-fade"
+      {show && <DetailUI show={show} onShow={onChangeShow} contentId={contentId} />}
+      <SliderContainer
         style={{ transform: `translateX(${move}%)` }}
         onTouchEnd={(e) => onTouchEnd(e)}
         onTouchStart={(e) => onTouchStart(e)}
       >
-        <div className="w-screen px-10">
-          <div ref={ref} className="w-full grid grid-cols-1 gap-5 my-10">
-            <div className="w-full bg-white opacity-10 h-56 rounded-2xl"></div>
-            <div className="w-full bg-white opacity-10 h-56 rounded-2xl"></div>
-          </div>
-        </div>
-
-        <div className="w-screen px-10">
-          <div ref={ref} className="w-full grid grid-cols-1 gap-5 my-10">
-            <div className="w-full bg-white opacity-10 h-56 rounded-2xl"></div>
-            <div className="w-full bg-white opacity-10 h-56 rounded-2xl"></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center items-center flex-shrink-0">
-        <img src="/img/leftArrow.svg" alt="left arrow" onClick={leftMove} />
-        <div className="flex mx-8 ">
-          <div className="w-3 h-3 rounded-full bg-white opacity-50 mr-2.5"></div>
-          <div className="w-3 h-3 rounded-full bg-white opacity-25"></div>
-        </div>
-        <img src="/img/rightArrow.svg" alt="right arrow" onClick={rightMove} />
-      </div>
+        <Slide totalSlides={totalSlides} data={data} onShow={onChangeShow}/>
+        {/* {generateSlider(totalSlides, data, isMobile, onChangeShow)} */}
+      </SliderContainer>
+      <SliderBubbleButton
+        totalSlides={totalSlides}
+        activeSlide={activeSlide}
+        leftMove={leftMove}
+        rightMove={rightMove}
+        bubbleMove={bubbleMove}
+      />
     </>
   );
 };
