@@ -111,8 +111,8 @@ const UiUx = (props) => {
         onTouchEnd={(e) => onTouchEnd(e)}
         onTouchStart={(e) => onTouchStart(e)}
       >
-        <Slide totalSlides={totalSlides} data={data} onShow={onChangeShow}/>
-        {/* {generateSlider(totalSlides, data, isMobile, onChangeShow)} */}
+        {/* <Slide totalSlides={totalSlides} data={data} onShow={onChangeShow}/> */}
+        {generateSlider(totalSlides, data, isMobile, onChangeShow)}
       </SliderContainer>
       <SliderBubbleButton
         totalSlides={totalSlides}
