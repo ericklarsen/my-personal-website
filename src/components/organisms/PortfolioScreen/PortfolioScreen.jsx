@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import PortfolioLayout from "../../layouts/PortfolioLayout";
-import Tag from "../../atoms/Tag";
 import TabMenu from "./TabMenu";
 import UiUx from "./UiUx";
 import WebProjects from "./WebProjects";
+import Tag from "../../atoms/Tag";
 
 const Container = ({ children }) => {
-  return <div className="w-full py-10">{children}</div>;
+  return <div className="w-full py-10 overflow-x-hidden lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl">{children}</div>;
 };
 
 const PortfolioScreen = (props) => {
@@ -15,7 +15,9 @@ const PortfolioScreen = (props) => {
 
   return (
     <PortfolioLayout>
-      <Tag>Portfolio</Tag>
+      <Tag rotate={true}>
+        Portfolio
+      </Tag>
 
       <Container>
         <TabMenu setCurrentTab={setCurrentTab} currentTab={currentTab} />

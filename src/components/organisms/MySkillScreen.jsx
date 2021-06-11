@@ -73,7 +73,7 @@ const MySkillScreen = (props) => {
         <br />
         Skills.
       </Tag>
-      <div className="w-full grid grid-cols-3 gap-12 p-10 pt-16">
+      <div className="w-full grid grid-cols-3 gap-12 p-10 pt-16 sm:gap-32 md:mr-0 md:max-w-xl md:gap-24 lg:mr-12 lg:max-w-2xl xl:mr-24 xl:max-w-3xl xl:grid-cols-4 xl:gap-20 2xl:mr-0">
         {data.map((item, i) => (
           <div key={i} className="w-full">
             <img src={item.src} alt={item.alt} className="w-full object-contain" />
