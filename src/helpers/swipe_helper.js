@@ -1,3 +1,4 @@
+import React from "react";
 import SliderSlide from "../components/molecules/Slider/SliderSlide";
 
 export const generateSlider = (totalSlides, data, isMobile, onShow) => {
@@ -24,7 +25,11 @@ export const generateSlider = (totalSlides, data, isMobile, onShow) => {
                 onClick={() => onShow(item.id)}
               >
                 <div className="absolute top-0 left-0 w-full h-full bg-dark-500 opacity-50 rounded-2xl z-10 hover:bg-transparent transition-all"></div>
-                <img src={item.mainImage} alt="images" className="w-full h-full object-cover rounded-2xl" />
+                <img
+                  src={item.mainImage}
+                  alt="images"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             );
           } else if (mainIdx !== 1 && subIdx > position && subIdx <= mainIdx * contentPerSlide) {
@@ -35,7 +40,11 @@ export const generateSlider = (totalSlides, data, isMobile, onShow) => {
                 className="w-full bg-white opacity-10 h-56 md:h-80 rounded-2xl cursor-pointer"
                 onClick={() => onShow(item.id)}
               >
-                <img src={item.mainImage} alt="images" className="w-full h-full object-cover rounded-2xl" />
+                <img
+                  src={item.mainImage}
+                  alt="images"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             );
           }
