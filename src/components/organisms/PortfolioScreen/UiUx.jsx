@@ -96,12 +96,11 @@ const UiUx = () => {
   }, [swipeDirection]);
 
   useEffect(() => {
-    // if (isMobile) {
-    //   setTotalSlides(Math.ceil(data.length / 2));
-    // } else {
-    //   setTotalSlides(Math.ceil(data.length / 4));
-    // }
-    setTotalSlides(Math.ceil(data.length / 4));
+    if (isMobile) {
+      setTotalSlides(Math.ceil(data.length / 2));
+    } else {
+      setTotalSlides(Math.ceil(data.length / 4));
+    }
   }, [isMobile]);
 
   return (
