@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin");
+/* eslint-disable prettier/prettier */
 
 module.exports = {
   mode: "jit",
@@ -54,6 +54,9 @@ module.exports = {
       padding: {
         35: "8.75rem",
       },
+      zIndex : {
+        '100' : 100
+      }
     },
   },
   variants: {
