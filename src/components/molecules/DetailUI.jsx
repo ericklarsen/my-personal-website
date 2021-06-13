@@ -15,7 +15,7 @@ const DetailUI = ({ show, onShow, contentId }) => {
       <img
         src="/img/close.svg"
         alt="close"
-        className="w-5 h-5 fixed object-contain top-8 right-5 cursor-pointer md:top-16 md:right-16 md:w-10 md:h-10"
+        className="w-5 h-5 fixed object-contain top-8 right-5 cursor-pointer md:top-16 md:right-16 md:w-10 md:h-10 transition-all transform hover:scale-125 hover:rotate-180"
         onClick={onShow}
       />
       <div className="w-full max-w-5xl flex flex-col items-center">
