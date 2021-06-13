@@ -10,8 +10,12 @@ const Footer = () => {
           Thank you
         </h1>
         <div className="flex flex-row mt-3.5 xl:mt-0 xl:ml-7">
-          <img src="/img/github_icon.svg" alt="github" />
-          <img className="ml-5" src="/img/linkedin_icon.svg" alt="linkedin" />
+          <a href="https://github.com/ericklarsen" target="blank">
+            <img src="/img/github_icon.svg" alt="github" className="cursor-pointer" />
+          </a>
+          <a href="https://www.linkedin.com/in/ericklarsenn/" target="blank">
+            <img className="ml-5 cursor-pointer" src="/img/linkedin_icon.svg" alt="linkedin" />
+          </a>
         </div>
         <img
           src="/img/overlayFooter.svg"

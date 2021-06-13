@@ -12,7 +12,7 @@ const index = () => {
   const seoData = [
     {
       type: "title",
-      title: "Hi. I'm Erick!",
+      title: "Hi. I'm Erick! | FrontEnd Developer",
     },
     {
       type: "meta",

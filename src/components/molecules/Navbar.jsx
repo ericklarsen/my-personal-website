@@ -12,8 +12,12 @@ const Navbar = () => {
     <>
       <div className="w-full flex flex-row justify-between items-center absolute left-0 px-10 xl:px-35 2xl:px-28">
         <div className="flex flex-row">
-          <img src="/img/github_icon.svg" alt="github" />
-          <img className="ml-5" src="/img/linkedin_icon.svg" alt="linkedin" />
+          <a href="https://github.com/ericklarsen" target="blank">
+            <img src="/img/github_icon.svg" alt="github" className="cursor-pointer" />
+          </a>
+          <a href="https://www.linkedin.com/in/ericklarsenn/" target="blank">
+            <img className="ml-5 cursor-pointer" src="/img/linkedin_icon.svg" alt="linkedin" />
+          </a>
         </div>
         <img src="/img/menu_icon.svg" alt="menu" className=" md:hidden" onClick={onChangeShow} />
         <div className="hidden flex-row items-center md:flex">
