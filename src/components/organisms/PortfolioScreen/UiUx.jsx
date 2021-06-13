@@ -111,7 +111,6 @@ const UiUx = () => {
         onTouchEnd={(e) => onTouchEnd(e)}
         onTouchStart={(e) => onTouchStart(e)}
       >
-        <h1 className="text-white">{"" + isMobile}</h1>
         {/* <Slide totalSlides={totalSlides} data={data} onShow={onChangeShow}/> */}
         {generateSlider(totalSlides, data, isMobile, onChangeShow)}
       </SliderContainer>
