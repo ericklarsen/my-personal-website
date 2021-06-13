@@ -31,6 +31,12 @@ const SliderBubbleButton = ({ totalSlides, activeSlide, leftMove, rightMove, bub
   );
 };
 
-SliderBubbleButton.propTypes = {};
+SliderBubbleButton.propTypes = {
+  totalSlides: PropTypes.number,
+  activeSlide: PropTypes.number,
+  leftMove: PropTypes.func,
+  rightMove: PropTypes.func,
+  bubbleMove: PropTypes.func,
+};
 
 export default SliderBubbleButton;

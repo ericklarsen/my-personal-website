@@ -9,6 +9,8 @@ const SliderSlide = ({ children }) => {
   );
 };
 
-SliderSlide.propTypes = {};
+SliderSlide.propTypes = {
+  children: PropTypes.node,
+};
 
 export default SliderSlide;
