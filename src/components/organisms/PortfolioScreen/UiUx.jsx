@@ -1,15 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
+// import PropTypes from "prop-types";
 import SliderContainer from "../../molecules/Slider/SliderContainer";
-import SliderSlide from "../../molecules/Slider/SliderSlide";
 import UseIsMobile from "../../../hooks/UseIsMobile";
 import { generateSlider } from "../../../helpers/swipe_helper";
 import DetailUI from "../../molecules/DetailUI";
 import { allData } from "../../../styles/_variables";
 import SliderBubbleButton from "../../molecules/Slider/SliderBubbleButton";
-import Slide from "../../molecules/Slider/Slide";
 
-const UiUx = (props) => {
+const UiUx = () => {
   const [move, setMove] = useState(0);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
@@ -87,10 +85,12 @@ const UiUx = (props) => {
     if (swipeDirection == "left") {
       if (Math.abs(move + valuePerMove) < maxMove) {
         setMove((prev) => prev + valuePerMove);
+        setActiveSlide((prev) => prev + 1);
       }
     } else if (swipeDirection == "right") {
       if (Math.abs(move) !== 0) {
         setMove((prev) => prev - valuePerMove);
+        setActiveSlide((prev) => prev - 1);
       }
     }
   }, [swipeDirection]);

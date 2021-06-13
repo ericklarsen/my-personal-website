@@ -7,7 +7,7 @@ const DetailUI = ({ show, onShow, contentId }) => {
 
   return (
     <div
-      className={`w-screen h-screen fixed z-10 px-5 left-0 top-0 animate-fade overflow-y-auto flex flex-col items-center py-20 md:py-32 ${
+      className={`w-screen h-screen fixed z-100 px-5 left-0 top-0 animate-fade overflow-y-auto flex flex-col items-center py-20 md:py-32 ${
         !show ? "hidden" : "block"
       }`}
       style={{ background: "rgba(41, 41, 41, 0.85)" }}
@@ -27,6 +27,10 @@ const DetailUI = ({ show, onShow, contentId }) => {
   );
 };
 
-DetailUI.propTypes = {};
+DetailUI.propTypes = {
+  show: PropTypes.bool,
+  onShow: PropTypes.func,
+  contentId: PropTypes.number,
+};
 
 export default DetailUI;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import BottomSheet from "../atoms/BottomSheet";
 
-const Navbar = (props) => {
+const Navbar = () => {
   const [show, setShow] = useState(false);
 
   const onChangeShow = () => {
@@ -15,25 +15,52 @@ const Navbar = (props) => {
           <img src="/img/github_icon.svg" alt="github" />
           <img className="ml-5" src="/img/linkedin_icon.svg" alt="linkedin" />
         </div>
-        <img src="/img/menu_icon.svg" alt="menu" className="lg:hidden" onClick={onChangeShow} />
-        <div className="hidden flex-row items-center lg:flex">
-          <h5 className="font-mont-extra-bold text-red-400 text-lg tracking-wider mr-11 cursor-pointer">
+        <img src="/img/menu_icon.svg" alt="menu" className=" md:hidden" onClick={onChangeShow} />
+        <div className="hidden flex-row items-center md:flex">
+          <a
+            href="#about"
+            className="font-mont-extra-bold text-red-400 text-lg tracking-wider mr-11 cursor-pointer"
+          >
             About Me.
-          </h5>
-          <h5 className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer">
+          </a>
+          <a
+            href="#myskill"
+            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer"
+          >
             My Skills.
-          </h5>
-          <h5 className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer">
+          </a>
+          <a
+            href="#portfolio"
+            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer"
+          >
             Portfolio.
-          </h5>
+          </a>
           <img src="/img/chat_icon.svg" alt="chat" className="cursor-pointer" />
         </div>
       </div>
       <BottomSheet show={show} onShow={onChangeShow}>
         <div className="w-full flex flex-col items-center justify-center">
-          <p className="font-mont-extra-bold text-red-400 text-sm tracking-widest mb-9">About Me</p>
-          <p className="font-mont-extra-bold text-white text-sm tracking-widest mb-9">My Skills</p>
-          <p className="font-mont-extra-bold text-white text-sm tracking-widest mb-9">Portfolio</p>
+          <a
+            href="#about"
+            onClick={onChangeShow}
+            className="font-mont-extra-bold text-red-400 text-sm tracking-widest mb-9"
+          >
+            About Me
+          </a>
+          <a
+            href="#myskill"
+            onClick={onChangeShow}
+            className="font-mont-extra-bold text-white text-sm tracking-widest mb-9"
+          >
+            My Skills
+          </a>
+          <a
+            href="#portfolio"
+            onClick={onChangeShow}
+            className="font-mont-extra-bold text-white text-sm tracking-widest mb-9"
+          >
+            Portfolio
+          </a>
           <img src="/img/chat_icon.svg" alt="chat" className="w-7" />
         </div>
       </BottomSheet>
