@@ -1,11 +1,11 @@
 import React from "react";
 import SliderSlide from "../components/molecules/Slider/SliderSlide";
+import SliderImage from "../components/molecules/Slider/SliderImage";
 
 export const generateSlider = (totalSlides, data, isMobile, onShow) => {
   let position = 0;
   let contentPerSlide = 4;
 
-  console.log(isMobile);
   if (isMobile) {
     contentPerSlide = 2;
   }
@@ -22,15 +22,11 @@ export const generateSlider = (totalSlides, data, isMobile, onShow) => {
             return (
               <div
                 key={j}
-                className="relative w-full h-56 md:h-80 rounded-2xl cursor-pointer"
+                className="relative w-full h-56 md:h-80 rounded-2xl cursor-pointer overflow-hidden"
                 onClick={() => onShow(item.id)}
               >
                 <div className="hidden absolute top-0 left-0 w-full h-full bg-dark-500 opacity-50 rounded-2xl z-10 hover:bg-transparent transition-all xl:flex"></div>
-                <img
-                  src={item.mainImage}
-                  alt="images"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+                <SliderImage src={item.mainImage} />
               </div>
             );
           } else if (mainIdx !== 1 && subIdx > position && subIdx <= mainIdx * contentPerSlide) {
@@ -38,15 +34,11 @@ export const generateSlider = (totalSlides, data, isMobile, onShow) => {
             return (
               <div
                 key={j}
-                className="relative w-full h-56 md:h-80 rounded-2xl cursor-pointer"
+                className="relative w-full h-56 md:h-80 rounded-2xl cursor-pointer overflow-hidden"
                 onClick={() => onShow(item.id)}
               >
                 <div className="hidden absolute top-0 left-0 w-full h-full bg-dark-500 opacity-50 rounded-2xl z-10 hover:bg-transparent transition-all xl:flex"></div>
-                <img
-                  src={item.mainImage}
-                  alt="images"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+                <SliderImage src={item.mainImage} />
               </div>
             );
           }
