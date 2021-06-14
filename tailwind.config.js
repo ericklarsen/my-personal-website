@@ -11,8 +11,8 @@ module.exports = {
       },
       colors: {
         dark: {
-          200: "#353535",
-          500: "#434343",
+          "200": "#353535",
+          "500": "#434343",
         },
         "maroon" : "#F36666"
       },
@@ -60,7 +60,7 @@ module.exports = {
         sliderMobile: "472px",
       },
       padding: {
-        35: "8.75rem",
+        "35": "8.75rem",
       },
       zIndex : {
         '100' : 100,

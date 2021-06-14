@@ -23,19 +23,19 @@ const Navbar = () => {
         <div className="hidden flex-row items-center md:flex">
           <a
             href="#about"
-            className="font-mont-extra-bold text-red-400 text-lg tracking-wider mr-11 cursor-pointer"
+            className="font-mont-extra-bold text-maroon text-lg tracking-wider mr-11 cursor-pointer"
           >
             About Me.
           </a>
           <a
             href="#myskill"
-            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer"
+            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer transition-all hover:text-maroon"
           >
             My Skills.
           </a>
           <a
             href="#portfolio"
-            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer"
+            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer transition-all hover:text-maroon"
           >
             Portfolio.
           </a>
