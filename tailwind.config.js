@@ -31,6 +31,10 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "fade-out": {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
         loading: {
           "0%": { "background-color": "#434343" },
           "50%": { "background-color": "#353535" },
@@ -40,11 +44,17 @@ module.exports = {
           "0%": { transform: "translateY(200%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "bottomsheet-out": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(200%)" },
+        },
       },
       animation: {
         fade: "fade 350ms ease-in-out",
+        "fade-out": "fade-out 550ms ease-in-out",
         loading: "loading 1s infinite",
         bottomsheet: "bottomsheet 0.55s cubic-bezier(0.85,0.01,0.25,1)",
+        "bottomsheet-out": "bottomsheet-out 0.55s cubic-bezier(0.85,0.01,0.25,1)",
         "spin-slow": "spin 6s linear infinite",
       },
       width: {
