@@ -6,7 +6,10 @@ function CommonHead(props) {
   return (
     <Head {...props}>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="theme-color" content="#434343" />
       <link rel="icon" href="/favicon.svg" />
