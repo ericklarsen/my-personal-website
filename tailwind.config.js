@@ -3,25 +3,28 @@
 module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ["Montserrat", "sans-serif"],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--gradient-color-stops))",
       },
       colors: {
         dark: {
-          "200": "#353535",
-          "500": "#434343",
+          200: "#353535",
+          500: "#434343",
         },
-        "maroon" : "#F36666"
+        maroon: "#F36666",
       },
-      fontFamily: {
-        "mont-black": ["Montserrat-Black"],
-        "mont-bold": ["Montserrat-Bold"],
-        "mont-extra-bold": ["Montserrat-ExtraBold"],
-        "mont-medium": ["Montserrat-Medium"],
-        "mont-regular": ["Montserrat-Regular"],
+      fontWeight: {
+        "mont-black": 900,
+        "mont-extra-bold": 800,
+        "mont-bold": 700,
+        "mont-medium": 500,
+        "mont-regular": 400,
       },
       keyframes: {
         fade: {
@@ -29,9 +32,9 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         loading: {
-          "0%": { 'background-color' : '#434343' },
-          "50%": { 'background-color' : '#353535' },
-          "100%": { 'background-color' : '#434343' },
+          "0%": { "background-color": "#434343" },
+          "50%": { "background-color": "#353535" },
+          "100%": { "background-color": "#434343" },
         },
         bottomsheet: {
           "0%": { transform: "translateY(200%)" },
@@ -42,10 +45,10 @@ module.exports = {
         fade: "fade 350ms ease-in-out",
         loading: "loading 1s infinite",
         bottomsheet: "bottomsheet 0.55s cubic-bezier(0.85,0.01,0.25,1)",
-        'spin-slow': 'spin 6s linear infinite',
+        "spin-slow": "spin 6s linear infinite",
       },
       width: {
-        "105": "26.25rem",
+        105: "26.25rem",
       },
       height: {
         content: "fit-content",
@@ -60,11 +63,11 @@ module.exports = {
         sliderMobile: "472px",
       },
       padding: {
-        "35": "8.75rem",
+        35: "8.75rem",
       },
-      zIndex : {
-        '100' : 100,
-        '-1' : -1,
+      zIndex: {
+        100: 100,
+        "-1": -1,
       },
     },
   },
