@@ -12,7 +12,7 @@ const index = () => {
   const seoData = [
     {
       type: "title",
-      title: "Hi. I'm Erick! | FrontEnd Developer",
+      title: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
     },
     {
       type: "meta",
@@ -41,7 +41,7 @@ const index = () => {
     {
       type: "og",
       name: "og:title",
-      content: "Hi. I'm Erick! Welcome to My Personal Website.",
+      content: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
     },
     {
       type: "og",
@@ -55,7 +55,7 @@ const index = () => {
     {
       type: "meta",
       name: "twitter:title",
-      content: "Hi. I'm Erick! Welcome to My Personal Website.",
+      content: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
     },
     { type: "meta", name: "twitter:card", content: "summary_large_image" },
     { type: "meta", name: "twitter:site", content: "@kulinaID" },
