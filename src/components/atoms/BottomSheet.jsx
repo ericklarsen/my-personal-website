@@ -10,7 +10,7 @@ const BottomSheet = ({ children, show, onShow }) => {
     } else {
       setTimeout(() => {
         setTriggerShow(false);
-      }, 550);
+      }, 510);
     }
   }, [show]);
 
