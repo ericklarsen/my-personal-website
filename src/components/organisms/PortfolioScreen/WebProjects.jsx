@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 // import PropTypes from "prop-types";
 import SliderContainer from "../../molecules/Slider/SliderContainer";
 import SliderSlide from "../../molecules/Slider/SliderSlide";
 
-const WebProjects = (props) => {
-  const [move, setMove] = useState(0);
-
+const WebProjects = () => {
   const leftMove = () => {
     console.log("");
   };
@@ -14,19 +12,19 @@ const WebProjects = (props) => {
     console.log("");
   };
 
-  const elipsis = {
-    display: "-webkit-box",
-    WebkitLineClamp: 4,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    wordBreak: "break-word",
-  };
+  // const elipsis = {
+  //   display: "-webkit-box",
+  //   WebkitLineClamp: 4,
+  //   WebkitBoxOrient: "vertical",
+  //   overflow: "hidden",
+  //   textOverflow: "ellipsis",
+  //   wordBreak: "break-word",
+  // };
 
   return (
     <>
       <SliderContainer
-        style={{ transform: `translateX(${move}%)` }}
+        style={{ transform: `translateX(0%)` }}
         // onTouchEnd={(e) => onTouchEnd(e)}
         // onTouchStart={(e) => onTouchStart(e)}
       >
