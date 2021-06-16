@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import SliderContainer from "../../molecules/Slider/SliderContainer";
 import SliderSlide from "../../molecules/Slider/SliderSlide";
 
@@ -32,7 +32,10 @@ const WebProjects = (props) => {
       >
         <SliderSlide column={1}>
           {[...Array(3).keys()].map((i) => (
-            <div className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5">
+            <div
+              key={i}
+              className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5"
+            >
               <h5 className="text-white font-mont-bold tracking-wide text-lg">
                 Academic Website - 2019
               </h5>
