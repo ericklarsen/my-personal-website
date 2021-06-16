@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import PropTypes from "prop-types";
 import BottomSheet from "../atoms/BottomSheet";
 
@@ -8,28 +8,59 @@ const Navbar = () => {
   const onChangeShow = () => {
     setShow(!show);
   };
+
+  const darkmode = () => {
+    const theme = localStorage.theme;
+    if (!theme || theme !== "dark") {
+      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.theme = "default";
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   return (
     <>
       <div className="w-full flex flex-row justify-between items-center absolute left-0 px-10 xl:px-35 2xl:px-28">
         <div className="flex flex-row">
           <a href="https://github.com/ericklarsen" target="blank">
-            <img src="/img/github_icon.svg" alt="github" className="cursor-pointer" />
+            <img
+              src="/img/github_icon.svg"
+              alt="github"
+              className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
+            />
           </a>
           <a href="https://www.linkedin.com/in/ericklarsenn/" target="blank">
-            <img className="ml-5 cursor-pointer" src="/img/linkedin_icon.svg" alt="linkedin" />
+            <img
+              className="ml-5 cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
+              src="/img/linkedin_icon.svg"
+              alt="linkedin"
+            />
           </a>
         </div>
         <img src="/img/menu_icon.svg" alt="menu" className=" md:hidden" onClick={onChangeShow} />
         <div className="hidden flex-row items-center md:flex">
           <a
             href="#about"
-            className="font-mont-extra-bold text-maroon text-lg tracking-wider mr-11 cursor-pointer"
+            className="font-mont-extra-bold text-maroon text-lg tracking-wider mr-11 cursor-pointer "
           >
             About Me.
           </a>
           <a
             href="#myskill"
-            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer transition-all hover:text-maroon"
+            className="font-mont-extra-bold text-white text-lg tracking-wider mr-11 cursor-pointer transition-all hover:text-maroon "
           >
             My Skills.
           </a>
@@ -39,7 +70,12 @@ const Navbar = () => {
           >
             Portfolio.
           </a>
-          <img src="/img/chat_icon.svg" alt="chat" className="cursor-pointer" />
+          <img
+            src="/img/chat_icon.svg"
+            alt="chat"
+            className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
+            onClick={darkmode}
+          />
         </div>
       </div>
       <BottomSheet show={show} onShow={onChangeShow}>
