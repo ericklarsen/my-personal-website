@@ -1,0 +1,53 @@
+{
+	"short_name": "Erick",
+	"name": "Erick Larsen",
+	"description": "Hi, I'm Erick Larsen!",
+	"start_url": "/",
+	"background_color": "#353535",
+	"theme_color": "#353535",
+	"display": "standalone",
+	"orientation": "any",
+	"icons": [
+		{
+			"src": "/pwa-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/pwa-192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/apple-touch-icon-180.png",
+			"type": "image/png",
+			"sizes": "180x180"
+		},
+		{
+			"src": "/android-144.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		},
+		{
+			"src": "/android-96.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "/android-72.png",
+			"type": "image/png",
+			"sizes": "72x72"
+		},
+		{
+			"src": "/android-48.png",
+			"type": "image/png",
+			"sizes": "48x48"
+		},
+		{
+			"src": "/android-36.png",
+			"type": "image/png",
+			"sizes": "36x36"
+		}
+	]
+}
