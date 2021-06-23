@@ -12,7 +12,7 @@ const index = () => {
   const seoData = [
     {
       type: "title",
-      title: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
+      title: "Erick Larsen | FrontEnd Developer - Javascript - UI/UX",
     },
     {
       type: "meta",
@@ -23,42 +23,42 @@ const index = () => {
       type: "meta",
       name: "description",
       content:
-        "Hey what's up! My name is Erick and I’m currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenge.",
+        "Hey what's up! My name is Erick, currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenges.",
     },
     { type: "og", name: "og:title", content: `FOOD.ID` },
     {
       type: "og",
       name: "og:description",
       content:
-        "Hey what's up! My name is Erick and I’m currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenge.",
+        "Hey what's up! My name is Erick, currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenges.",
     },
     {
       type: "meta",
       name: "twitter:description",
       content:
-        "Hey what's up! My name is Erick and I’m currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenge.",
+        "Hey what's up! My name is Erick, currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenges.",
     },
     {
       type: "og",
       name: "og:title",
-      content: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
+      content: "Erick Larsen | FrontEnd Developer - Javascript - UI/UX",
     },
     {
       type: "og",
       name: "og:description",
-      content: `Hey what's up! My name is Erick and I’m currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenge.`,
+      content: `Hey what's up! My name is Erick, currently working as a FrontEnd Developer. My competencies are on React, Redux, Next JS, Javascript and also UI/UX. I am always enthusiastic to learn and take new challenges.`,
     },
     // { type: "og", name: "og:image", content: `${HOST}/static/img/cover-fd.jpeg` },
     // { type: "og", name: "og:url", content: `${HOST}` },
-    { type: "og", name: "og:site_name", content: "FOOD.ID" },
+    { type: "og", name: "og:site_name", content: "ericklarsen.com" },
     { type: "og", name: "og:type", content: "website" },
     {
       type: "meta",
       name: "twitter:title",
-      content: "Hi. I'm Erick! | FrontEnd Developer - Javascript - UI/UX",
+      content: "Erick Larsen | FrontEnd Developer - Javascript - UI/UX",
     },
     { type: "meta", name: "twitter:card", content: "summary_large_image" },
-    { type: "meta", name: "twitter:site", content: "@kulinaID" },
+    { type: "meta", name: "twitter:site", content: "@teletublessss" },
   ];
   return (
     <MainLayout>

@@ -7,8 +7,10 @@ import WebProjects from "./WebProjects";
 import Tag from "../../atoms/Tag";
 import { UseElementOnScreen } from "../../../hooks/UseElementOnScreen";
 
-const Container = ({ children }) => (
-  <div className="w-full py-10 overflow-x-hidden lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl animate-fade">
+const Container = ({ children, className }) => (
+  <div
+    className={`w-full py-10 overflow-x-hidden lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl animate-fade ${className}`}
+  >
     {children}
   </div>
 );
@@ -25,12 +27,14 @@ const PortfolioScreen = () => {
     <PortfolioLayout ref={containerRef}>
       <Tag rotate={true}>Portfolio</Tag>
 
-      {isVisible && (
-        <Container>
-          <TabMenu setCurrentTab={setCurrentTab} currentTab={currentTab} />
-          {currentTab === "uiux" ? <UiUx /> : <WebProjects />}
-        </Container>
-      )}
+      <Container className={!isVisible ? "min-h-screen" : ""}>
+        {isVisible && (
+          <>
+            <TabMenu setCurrentTab={setCurrentTab} currentTab={currentTab} />
+            {currentTab === "uiux" ? <UiUx /> : <WebProjects />}
+          </>
+        )}
+      </Container>
     </PortfolioLayout>
   );
 };
@@ -39,6 +43,7 @@ PortfolioScreen.propTypes = {};
 
 Container.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default PortfolioScreen;
