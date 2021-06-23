@@ -59,10 +59,10 @@ const AboutMeScreen = () => {
         <p className="text-white font-mont-regular mt-10 leading-loose md:mt-6 md:text-lg md:leading-loose">
           {`Hey what's up!`}
           <br />
-          My name is Erick and I’m currently working as a FrontEnd Developer.
+          My name is Erick, currently working as a FrontEnd Developer.
           <br />
           My competencies are on React, Redux, Next JS, Javascript and also UI/UX.
-          <br />I am always enthusiastic to learn and take new challenge.
+          <br />I am always enthusiastic to learn and take new challenges.
         </p>
 
         <div className=" w-full py-2 mt-12 bg-maroon md:w-105 md:px-5 md:mt-24">
