@@ -93,7 +93,8 @@ const MySkillScreen = () => {
               alt={item.alt}
               width={150}
               height={150}
-              // className="w-full object-contain"
+              placeholder="blur"
+              blurDataURL={item.src}
             />
           </div>
         ))}

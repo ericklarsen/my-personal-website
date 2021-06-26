@@ -44,15 +44,31 @@ const AboutMeScreen = () => {
           width={509}
           height={505}
           className="transform scale-75 lg:scale-100"
+          placeholder="blur"
+          blurDataURL="/img/react_overlay.svg"
         />
       </div>
 
       <div className="absolute top-1/4 -left-36 z-10 transform scale-75 lg:scale-100 lg:top-0 lg:-left-28 animate-pulse">
-        <Image src="/img/html_overlay.svg" alt="html" width={351} height={457} />
+        <Image
+          src="/img/html_overlay.svg"
+          alt="html"
+          width={351}
+          height={457}
+          placeholder="blur"
+          blurDataURL="/img/html_overlay.svg"
+        />
       </div>
 
       <div className="absolute -bottom-20 -right-2/4 z-10 transform scale-75 lg:scale-100 lg:-right-28 animate-pulse">
-        <Image src="/img/next_overlay.svg" alt="nextjs" width={549} height={330} />
+        <Image
+          src="/img/next_overlay.svg"
+          alt="nextjs"
+          width={549}
+          height={330}
+          placeholder="blur"
+          blurDataURL="/img/next_overlay.svg"
+        />
       </div>
       <div
         className={`w-full px-10 box-border md:px-0 md:max-w-3xl transition-all z-20 relative duration-300 ${
@@ -89,6 +105,8 @@ const AboutMeScreen = () => {
                   alt="location"
                   layout="fill"
                   objectFit="contain"
+                  placeholder="blur"
+                  blurDataURL="/img/location_icon.svg"
                 />
               </div>
               <p className="text-white font-mont-regular text-xs tracking-wide md:text-base">
