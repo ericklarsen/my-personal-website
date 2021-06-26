@@ -105,8 +105,6 @@ const AboutMeScreen = () => {
                   alt="location"
                   layout="fill"
                   objectFit="contain"
-                  placeholder="blur"
-                  blurDataURL="/img/location_icon.svg"
                 />
               </div>
               <p className="text-white font-mont-regular text-xs tracking-wide md:text-base">
