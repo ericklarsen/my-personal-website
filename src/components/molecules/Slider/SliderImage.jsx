@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import PropTypes from "prop-types";
 import Loader from "../../atoms/Loader";
 
@@ -8,12 +9,17 @@ const SliderImage = ({ src }) => {
   return (
     <>
       {isVisible && <Loader />}
-      <img
-        src={src}
-        alt="images"
-        onLoad={() => setIsVisible(false)}
-        className="w-full h-full object-cover rounded-2xl"
-      />
+      <div className="w-full h-full object-cover rounded-2xl">
+        <Image
+          src={src}
+          alt="images"
+          onLoad={() => setIsVisible(false)}
+          placeholder="blur"
+          objectFit="cover"
+          blurDataURL={src}
+          layout="fill"
+        />
+      </div>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from "prop-types";
+import Image from "next/image";
 import BottomSheet from "../atoms/BottomSheet";
 
 const Navbar = () => {
@@ -36,21 +37,25 @@ const Navbar = () => {
       <div className="w-full flex flex-row justify-between items-center absolute left-0 px-10 xl:px-35 2xl:px-28">
         <div className="flex flex-row">
           <a href="https://github.com/ericklarsen" target="blank">
-            <img
-              src="/img/github_icon.svg"
-              alt="github"
-              className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
-            />
+            <div className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
+              <Image src="/img/github_icon.svg" alt="github" width={36} height={36} />
+            </div>
           </a>
           <a href="https://www.linkedin.com/in/ericklarsenn/" target="blank">
-            <img
-              className="ml-5 cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
-              src="/img/linkedin_icon.svg"
-              alt="linkedin"
-            />
+            <div className="ml-5 cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
+              <Image src="/img/linkedin_icon.svg" alt="linkedin" width={36} height={36} />
+            </div>
           </a>
         </div>
-        <img src="/img/menu_icon.svg" alt="menu" className=" md:hidden" onClick={onChangeShow} />
+        <div className="md:hidden">
+          <Image
+            src="/img/menu_icon.svg"
+            alt="menu"
+            width={20}
+            height={15}
+            onClick={onChangeShow}
+          />
+        </div>
         <div className="hidden flex-row items-center md:flex">
           <a
             href="#about"
@@ -70,12 +75,9 @@ const Navbar = () => {
           >
             Portfolio.
           </a>
-          <img
-            src="/img/chat_icon.svg"
-            alt="chat"
-            className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110"
-            onClick={darkmode}
-          />
+          <div className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
+            <Image src="/img/chat_icon.svg" alt="chat" width={36} height={35} onClick={darkmode} />
+          </div>
         </div>
       </div>
       <BottomSheet show={show} onShow={onChangeShow}>
@@ -101,7 +103,9 @@ const Navbar = () => {
           >
             Portfolio
           </a>
-          <img src="/img/chat_icon.svg" alt="chat" className="w-7" />
+          <div className="relative w-7 h-7">
+            <Image src="/img/chat_icon.svg" alt="chat" layout="fill" />
+          </div>
         </div>
       </BottomSheet>
     </>

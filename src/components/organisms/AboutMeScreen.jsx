@@ -1,5 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
+import Image from "next/image";
 import AboutMeLayout from "../layouts/AboutMeLayout";
 import Tag from "../atoms/Tag";
 import { UseElementOnScreen } from "../../hooks/UseElementOnScreen";
@@ -36,21 +37,39 @@ const AboutMeScreen = () => {
         <br />
         Me.
       </Tag>
-      <img
-        src="/img/react_overlay.svg"
-        alt="react"
-        className="absolute top-0 -right-64 z-10  lg:-right-56 lg:top-48 animate-spin-slow"
-      />
-      <img
-        src="/img/html_overlay.svg"
-        alt="html"
-        className="absolute top-1/4 -left-1/4 z-10 transform scale-75 lg:scale-100 lg:top-0 lg:-left-28 animate-pulse"
-      />
-      <img
-        src="/img/next_overlay.svg"
-        alt="nextjs"
-        className="absolute -bottom-12 -right-1/4 z-10 transform scale-75 lg:scale-100 lg:-right-28 animate-pulse"
-      />
+      <div className="absolute top-0 -right-64 z-10 lg:-right-56 lg:top-48 animate-spin-slow">
+        <Image
+          src="/img/react_overlay.svg"
+          alt="react"
+          width={509}
+          height={505}
+          className="transform scale-75 lg:scale-100"
+          placeholder="blur"
+          blurDataURL="/img/react_overlay.svg"
+        />
+      </div>
+
+      <div className="absolute top-1/4 -left-36 z-10 transform scale-75 lg:scale-100 lg:top-0 lg:-left-28 animate-pulse">
+        <Image
+          src="/img/html_overlay.svg"
+          alt="html"
+          width={351}
+          height={457}
+          placeholder="blur"
+          blurDataURL="/img/html_overlay.svg"
+        />
+      </div>
+
+      <div className="absolute -bottom-20 -right-2/4 z-10 transform scale-75 lg:scale-100 lg:-right-28 animate-pulse">
+        <Image
+          src="/img/next_overlay.svg"
+          alt="nextjs"
+          width={549}
+          height={330}
+          placeholder="blur"
+          blurDataURL="/img/next_overlay.svg"
+        />
+      </div>
       <div
         className={`w-full px-10 box-border md:px-0 md:max-w-3xl transition-all z-20 relative duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
@@ -80,7 +99,16 @@ const AboutMeScreen = () => {
               {item.position}
             </h4>
             <div className="w-full flex items-center">
-              <img src="/img/location_icon.svg" alt="location" className="mr-2 md:w-6" />
+              <div className="relative mr-2 w-4 h-4 md:w-6 md:h-6">
+                <Image
+                  src="/img/location_icon.svg"
+                  alt="location"
+                  layout="fill"
+                  objectFit="contain"
+                  placeholder="blur"
+                  blurDataURL="/img/location_icon.svg"
+                />
+              </div>
               <p className="text-white font-mont-regular text-xs tracking-wide md:text-base">
                 {item.location}
               </p>

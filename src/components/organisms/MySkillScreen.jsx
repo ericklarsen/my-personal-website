@@ -1,5 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
+import Image from "next/image";
 import MySkillLayout from "../layouts/MySkillLayout";
 import Tag from "../atoms/Tag";
 import { UseElementOnScreen } from "../../hooks/UseElementOnScreen";
@@ -87,7 +88,14 @@ const MySkillScreen = () => {
       >
         {data.map((item, i) => (
           <div key={i} className="w-full">
-            <img src={item.src} alt={item.alt} className="w-full object-contain" />
+            <Image
+              src={item.src}
+              alt={item.alt}
+              width={150}
+              height={150}
+              placeholder="empty"
+              // blurDataURL={item.src}
+            />
           </div>
         ))}
       </div>
