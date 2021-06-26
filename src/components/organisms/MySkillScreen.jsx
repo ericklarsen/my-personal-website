@@ -93,8 +93,8 @@ const MySkillScreen = () => {
               alt={item.alt}
               width={150}
               height={150}
-              placeholder="blur"
-              blurDataURL={item.src}
+              placeholder="empty"
+              // blurDataURL={item.src}
             />
           </div>
         ))}
