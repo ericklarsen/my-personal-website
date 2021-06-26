@@ -7,4 +7,7 @@ module.exports = withPWA({
     runtimeCaching,
     disable: process.env.NODE_ENV !== "production",
   },
+  images: {
+    domains: ["i.ibb.co"],
+  },
 });
