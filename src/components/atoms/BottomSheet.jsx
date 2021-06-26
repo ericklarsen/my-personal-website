@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import PropTypes from "prop-types";
 
 const BottomSheet = ({ children, show, onShow }) => {
@@ -33,12 +34,9 @@ const BottomSheet = ({ children, show, onShow }) => {
             className="absolute h-1 w-28 bg-white opacity-10 m-auto top-4 left-1/2"
             style={{ marginLeft: "-55px" }}
           ></div>
-          <img
-            src="/img/close.svg"
-            alt="close"
-            className="absolute right-4 top-4 w-7 h-7"
-            onClick={onShow}
-          />
+          <div className="absolute right-4 top-4 w-7 h-7" onClick={onShow}>
+            <Image src="/img/close.svg" alt="close" width={28} height={28} />
+          </div>
           {children}
         </div>
       </>

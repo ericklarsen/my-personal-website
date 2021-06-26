@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import PropTypes from "prop-types";
 import { allData } from "../../styles/_variables";
 
@@ -12,12 +13,13 @@ const DetailUI = ({ show, onShow, contentId }) => {
       }`}
       style={{ background: "rgba(41, 41, 41, 0.85)" }}
     >
-      <img
-        src="/img/close.svg"
-        alt="close"
+      <div
         className="w-5 h-5 fixed object-contain top-8 right-5 cursor-pointer md:top-16 md:right-16 md:w-10 md:h-10 transition-all transform hover:scale-125 hover:rotate-180"
         onClick={onShow}
-      />
+      >
+        <Image src="/img/close.svg" alt="close" width={40} height={40} />
+      </div>
+
       <div className="w-full max-w-5xl flex flex-col items-center">
         {data?.allImages?.map((item, i) => (
           <img key={i} src={item} alt="image" className="mb-10 max-w-full" />

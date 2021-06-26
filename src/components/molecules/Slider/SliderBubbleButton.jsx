@@ -1,13 +1,16 @@
 import React from "react";
+import Image from "next/image";
 import PropTypes from "prop-types";
 
 const SliderBubbleButton = ({ totalSlides, activeSlide, leftMove, rightMove, bubbleMove }) => {
   return (
     <div className="flex justify-center items-center flex-shrink-0">
-      <img
+      <Image
         src="/img/leftArrow.svg"
         alt="left arrow"
         onClick={leftMove}
+        width={12}
+        height={20}
         className={`${activeSlide === 1 && "opacity-20"} cursor-pointer`}
       />
       <div className="flex mx-8 ">
@@ -21,10 +24,12 @@ const SliderBubbleButton = ({ totalSlides, activeSlide, leftMove, rightMove, bub
           ></div>
         ))}
       </div>
-      <img
+      <Image
         src="/img/rightArrow.svg"
         alt="right arrow"
         onClick={rightMove}
+        width={12}
+        height={20}
         className={`${activeSlide === totalSlides && "opacity-20"} cursor-pointer`}
       />
     </div>

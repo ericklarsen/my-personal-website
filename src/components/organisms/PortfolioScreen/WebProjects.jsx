@@ -1,5 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
+import Image from "next/image";
 import SliderContainer from "../../molecules/Slider/SliderContainer";
 import SliderSlide from "../../molecules/Slider/SliderSlide";
 
@@ -52,12 +53,24 @@ const WebProjects = () => {
       </SliderContainer>
 
       <div className="flex justify-center items-center flex-shrink-0">
-        <img src="/img/leftArrow.svg" alt="left arrow" onClick={leftMove} />
+        <Image
+          width={12}
+          height={20}
+          src="/img/leftArrow.svg"
+          alt="left arrow"
+          onClick={leftMove}
+        />
         <div className="flex mx-8 ">
           <div className="w-3 h-3 rounded-full bg-white opacity-50 mr-2.5"></div>
           <div className="w-3 h-3 rounded-full bg-white opacity-25"></div>
         </div>
-        <img src="/img/rightArrow.svg" alt="right arrow" onClick={rightMove} />
+        <Image
+          width={12}
+          height={20}
+          src="/img/rightArrow.svg"
+          alt="right arrow"
+          onClick={rightMove}
+        />
       </div>
     </>
   );
