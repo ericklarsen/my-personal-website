@@ -16,6 +16,10 @@ const MySkillScreen = () => {
       alt: "react",
     },
     {
+      src: "/img/typescript.svg",
+      alt: "typescript",
+    },
+    {
       src: "/img/redux.svg",
       alt: "redux",
     },
