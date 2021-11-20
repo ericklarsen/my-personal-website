@@ -10,7 +10,7 @@ const Slider = ({ data, children }) => {
   const [startY, setStartY] = useState(0);
   const [startTime, setStartTime] = useState(0);
   const [swipeDirection, setSwipeDirection] = useState("");
-  const threshold = 50;
+  const threshold = 80;
   const restraint = 100;
   const allowedTime = 300;
   const maxMove = 100;
