@@ -11,7 +11,7 @@ const TabMenu = ({ setCurrentTab, currentTab }) => {
         )}
       </div>
       <div className="cursor-pointer" onClick={() => setCurrentTab("web")}>
-        <h6 className="font-mont-bold text-white text-lg">Web Project</h6>
+        <h6 className="font-mont-bold text-white text-lg">Web Projects</h6>
         {currentTab === "web" && (
           <div className="w-10 h-1 bg-maroon mt-0.5 float-right animate-fade"></div>
         )}
