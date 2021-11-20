@@ -9,7 +9,6 @@ const WebProjects = () => {
       id: 1,
       title: "Hotel Booking Mobile Apps (2019)",
       details: `I am an intern at the Swiss-Belhotel SKA Group Pekanbaru hotel, a state of the art 4-star hotel with 107 rooms, 10 Meeting Room and 1 Big Grand Ballroom. During my internship, I developed a mobile application for room bookings, meeting rooms and grand ballroom rentals.
-      <br/>
       I’m using React Native Framework to build the front end of the apps and then for the back end I'm using PHP language to transfer data in JSON / API.`,
     },
     {
@@ -17,14 +16,12 @@ const WebProjects = () => {
       title: "Itinerary Mobile Apps For Travel Agencies (2019)",
       details: `Mobile Apps are built using React Native as the front end and PHP language for the back end process.
 The feature developed in the app is that users can create the desired itinerary starting from the duration of the trip, the number of tourists to be taken, the hotel they want to stay in, the tourist attractions to be visited, the lunch and dinner places and the transportation they want to use during the trip.
-<br/>
 At the end of the itinerary creation process, the user can immediately find out how much the itinerary budget was made per tourist.`,
     },
     {
       id: 3,
       title: "Academic System (2020)",
       details: `The system is built using the PHP language and Codeigniter framework.
-      <br/>
 The features developed on this system are the academic data of all students at the school, starting from report cards per semester, subjects, lesson schedules, classes, online exams, attitude scores, semester registration and so on. Then there are also features for teaching staff at schools such as recap grades, attendance, achievement,student sanctions / violations, creating online exams and so on.`,
     },
     {
