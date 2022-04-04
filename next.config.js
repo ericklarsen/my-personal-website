@@ -6,6 +6,7 @@ module.exports = withPWA({
     dest: "public",
     runtimeCaching,
     disable: process.env.NODE_ENV !== "production",
+    buildExcludes: [/middleware-manifest.json$/]
   },
   images: {
     domains: ["i.ibb.co"],
