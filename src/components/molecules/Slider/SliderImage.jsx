@@ -9,7 +9,7 @@ const SliderImage = ({ src }) => {
   return (
     <>
       {isVisible && <Loader />}
-      <div className="w-full h-full object-cover rounded-2xl">
+      <div className="w-full h-full object-cover rounded-2xl relative">
         <Image
           src={src}
           alt="images"

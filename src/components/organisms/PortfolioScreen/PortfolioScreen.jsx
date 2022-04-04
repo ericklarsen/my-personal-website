@@ -32,6 +32,7 @@ const PortfolioScreen = () => {
           <>
             <TabMenu setCurrentTab={setCurrentTab} currentTab={currentTab} />
             {currentTab === "uiux" ? <UiUx /> : <WebProjects />}
+            {/* <UiUx /> */}
           </>
         )}
       </Container>

@@ -33,23 +33,19 @@ The feature developed on the website is that users can order coffee directly thr
   ];
 
   return (
-    <>
-      <SliderContainer style={{ transform: `translateX(0%)` }}>
-        <SliderSlide column={1}>
-          {data.map((item, i) => (
-            <div
-              key={i}
-              className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5"
-            >
-              <h5 className="text-white font-mont-bold tracking-wide text-lg">{item.title}</h5>
-              <p className="text-white mt-3 font-mont-regular tracking-wide text-xs leading-5">
-                {item.details}
-              </p>
-            </div>
-          ))}
-        </SliderSlide>
-      </SliderContainer>
-    </>
+    <SliderContainer style={{ transform: `translateX(0%)` }}>
+      <SliderSlide column={1}>
+        {data.map((item, i) => (
+          <div key={i} className="w-full border-2 border-white border-opacity-20  rounded-2xl p-5">
+            {console.log(item)}
+            <h5 className="text-white font-mont-bold tracking-wide text-lg">{item.title}</h5>
+            <p className="text-white mt-3 font-mont-regular tracking-wide text-xs leading-5">
+              {item.details}
+            </p>
+          </div>
+        ))}
+      </SliderSlide>
+    </SliderContainer>
   );
 };
 
