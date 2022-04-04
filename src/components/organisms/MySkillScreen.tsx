@@ -84,29 +84,33 @@ const MySkillScreen: React.FC = () => {
 
   return (
     <MySkillLayout ref={containerRef as React.MutableRefObject<HTMLDivElement>}>
-      <Tag>
-        My
-        <br />
-        Skills.
-      </Tag>
-      <div
-        className={`w-full grid grid-cols-3 gap-12 p-10 pt-16 sm:gap-36 md:mr-0 md:max-w-xl md:gap-24 lg:mr-12 lg:max-w-2xl xl:mr-24 xl:max-w-3xl xl:grid-cols-4 xl:gap-20 2xl:mr-0 transition-all duration-300 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        {data.map((item, i) => (
-          <div key={i} className="w-full">
-            <Image
-              src={item.src}
-              alt={item.alt}
-              width={150}
-              height={150}
-              placeholder="empty"
-              // blurDataURL={item.src}
-            />
+      {isVisible && (
+        <>
+          <Tag>
+            My
+            <br />
+            Skills.
+          </Tag>
+          <div
+            className={`w-full grid grid-cols-3 gap-12 p-10 pt-16 sm:gap-36 md:mr-0 md:max-w-xl md:gap-24 lg:mr-12 lg:max-w-2xl xl:mr-24 xl:max-w-3xl xl:grid-cols-4 xl:gap-20 2xl:mr-0 transition-all duration-300 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {data.map((item, i) => (
+              <div key={i} className="w-full">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={150}
+                  height={150}
+                  placeholder="empty"
+                  // blurDataURL={item.src}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
     </MySkillLayout>
   );
 };
