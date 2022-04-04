@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import AboutMeLayout from "../layouts/AboutMeLayout";
 import Tag from "../atoms/Tag";
@@ -10,6 +10,7 @@ const AboutMeScreen = () => {
     rootMargin: "0px",
     threshold: 0.5,
   });
+  const imageRef1 = React.useRef<HTMLDivElement>(null);
 
   const data = [
     {
@@ -36,38 +37,47 @@ const AboutMeScreen = () => {
         <br />
         Me.
       </Tag>
-      <div className="absolute top-0 -right-64 z-10 lg:-right-56 lg:top-48 animate-spin-slow">
-        <Image
-          src="/img/react_overlay.svg"
-          alt="react"
-          width={509}
-          height={505}
-          className="transform scale-75 lg:scale-100"
-          placeholder="blur"
-          blurDataURL="/img/react_overlay.svg"
-        />
+      <div
+        ref={imageRef1}
+        className="absolute top-0 -right-64 z-10 lg:-right-56 lg:top-48 animate-spin-slow"
+      >
+        {isVisible && (
+          <Image
+            src="/img/react_overlay.svg"
+            alt="react"
+            width={509}
+            height={505}
+            className="transform scale-75 lg:scale-100"
+            placeholder="blur"
+            blurDataURL="/img/react_overlay.svg"
+          />
+        )}
       </div>
 
       <div className="absolute top-1/4 -left-36 z-10 transform scale-75 lg:scale-100 lg:top-0 lg:-left-28 animate-pulse">
-        <Image
-          src="/img/html_overlay.svg"
-          alt="html"
-          width={351}
-          height={457}
-          placeholder="blur"
-          blurDataURL="/img/html_overlay.svg"
-        />
+        {isVisible && (
+          <Image
+            src="/img/html_overlay.svg"
+            alt="html"
+            width={351}
+            height={457}
+            placeholder="blur"
+            blurDataURL="/img/html_overlay.svg"
+          />
+        )}
       </div>
 
       <div className="absolute -bottom-20 -right-2/4 z-10 transform scale-75 lg:scale-100 lg:-right-28 animate-pulse">
-        <Image
-          src="/img/next_overlay.svg"
-          alt="nextjs"
-          width={549}
-          height={330}
-          placeholder="blur"
-          blurDataURL="/img/next_overlay.svg"
-        />
+        {isVisible && (
+          <Image
+            src="/img/next_overlay.svg"
+            alt="nextjs"
+            width={549}
+            height={330}
+            placeholder="blur"
+            blurDataURL="/img/next_overlay.svg"
+          />
+        )}
       </div>
       <div
         className={`w-full px-10 box-border md:px-0 md:max-w-3xl transition-all z-20 relative duration-300 ${

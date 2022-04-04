@@ -4,6 +4,7 @@ import BottomSheet from "../atoms/BottomSheet";
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState<boolean>(false);
+  const [showImage, setShowImage] = React.useState(false);
 
   const onChangeShow = () => {
     setShow(!show);
@@ -29,6 +30,7 @@ const Navbar: React.FC = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    setShowImage(true);
   }, []);
 
   return (
@@ -37,23 +39,29 @@ const Navbar: React.FC = () => {
         <div className="flex flex-row">
           <a href="https://github.com/ericklarsen" target="blank">
             <div className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
-              {/* <Image src="/img/github_icon.svg" alt="github" width={36} height={36} /> */}
+              {showImage && (
+                <Image src="/img/github_icon.svg" alt="github" width={36} height={36} />
+              )}
             </div>
           </a>
           <a href="https://www.linkedin.com/in/ericklarsenn/" target="blank">
             <div className="ml-5 cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
-              {/* <Image src="/img/linkedin_icon.svg" alt="linkedin" width={36} height={36} /> */}
+              {showImage && (
+                <Image src="/img/linkedin_icon.svg" alt="linkedin" width={36} height={36} />
+              )}
             </div>
           </a>
         </div>
         <div className="md:hidden">
-          {/* <Image
-            src="/img/menu_icon.svg"
-            alt="menu"
-            width={20}
-            height={15}
-            onClick={onChangeShow}
-          /> */}
+          {showImage && (
+            <Image
+              src="/img/menu_icon.svg"
+              alt="menu"
+              width={20}
+              height={15}
+              onClick={onChangeShow}
+            />
+          )}
         </div>
         <div className="hidden flex-row items-center md:flex">
           <a
@@ -75,7 +83,15 @@ const Navbar: React.FC = () => {
             Portfolio.
           </a>
           <div className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">
-            {/* <Image src="/img/chat_icon.svg" alt="chat" width={36} height={35} onClick={darkmode} /> */}
+            {showImage && (
+              <Image
+                src="/img/chat_icon.svg"
+                alt="chat"
+                width={36}
+                height={35}
+                onClick={darkmode}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -103,7 +119,7 @@ const Navbar: React.FC = () => {
             Portfolio
           </a>
           <div className="relative w-7 h-7">
-            {/* <Image src="/img/chat_icon.svg" alt="chat" layout="fill" /> */}
+            {showImage && <Image src="/img/chat_icon.svg" alt="chat" layout="fill" />}
           </div>
         </div>
       </BottomSheet>

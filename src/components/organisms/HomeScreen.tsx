@@ -1,22 +1,23 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-// import PropTypes from "prop-types";
 import HomeScreenLayout from "../layouts/HomeScreenLayout";
 import Navbar from "../molecules/Navbar";
 
 const HomeScreen: React.FC = () => {
+  const [show, setShow] = React.useState(false);
   useEffect(() => {
-    console.log("test");
-    console.log(document.getElementById("image1"));
-  });
+    setShow(true);
+  }, []);
   return (
     <HomeScreenLayout>
       <Navbar />
       <div className="pointer-events-none absolute top-0 -left-24 transform scale-125 md:scale-75 md:-left-1/4 md:-top-14">
-        {/* <Image id="image1" src="/img/Overlay.svg" alt="overlay" width={1300} height={316} /> */}
+        {show && (
+          <Image id="image1" src="/img/Overlay.svg" alt="overlay" width={1300} height={316} />
+        )}
       </div>
       <div className="pointer-events-none absolute -bottom-2 -right-24 transform scale-125 md:scale-75 md:-right-1/4 md:-bottom-14">
-        {/* <Image src="/img/Overlay.svg" alt="overlay" width={1300} height={316} /> */}
+        {show && <Image src="/img/Overlay.svg" alt="overlay" width={1300} height={316} />}
       </div>
       <div className="w-full h-full flex flex-col items-center justify-center animate-fade">
         <div className="w-max">
