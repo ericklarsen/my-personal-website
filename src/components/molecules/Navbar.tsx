@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full flex flex-row justify-between items-center absolute left-0 px-10 xl:px-35 2xl:px-28">
+      <div className="w-full flex flex-row justify-between items-center absolute left-0 top-[50px] px-10 xl:px-35 2xl:px-28">
         <div className="flex flex-row">
           <a href="https://github.com/ericklarsen" target="blank">
             <div className="cursor-pointer transition-all transform hover:opacity-50 hover:scale-110">

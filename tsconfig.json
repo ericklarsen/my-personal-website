@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/helpers/swipe_helper.js"  ],
+, "src/helpers/swipe_helper.tsx"  ],
   "exclude": [
     "node_modules"
   ]
