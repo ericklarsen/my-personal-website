@@ -11,4 +11,5 @@ module.exports = withPWA({
   images: {
     domains: ["i.ibb.co"],
   },
+  swcMinify: true,
 });
